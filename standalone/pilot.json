@@ -1,0 +1,26 @@
+{
+  "id": "dreamsite-first-customer",
+  "budgetMilliUsd": 5000,
+  "jobs": [
+    {
+      "id": "research-prospects",
+      "role": "research",
+      "allowanceMilliUsd": 2000,
+      "prompt": "Find 10 owner-operated service businesses in Fishers or Indianapolis that may need a simple one-page website. Use public sources and include exact business source URLs, date checked, existing website if found, observed gap, uncertainty, and public business contact route. Search for each business's own site before treating directory-only presence as a gap. A missing search result is not proof no website exists. Avoid franchises and fabricated contacts. Rank prospects by evidence of fit for a $500 one-page website; domain and hosting separate. Return fewer than 10 if evidence is insufficient and explain the shortage. Research only; do not contact anyone."
+    },
+    {
+      "id": "prepare-outreach",
+      "role": "draft",
+      "dependsOn": "research-prospects",
+      "allowanceMilliUsd": 1000,
+      "prompt": "Using only the prior research evidence, select up to five best supported prospects. Write a concise individualized outreach DRAFT and one-page website outline for each. The offer is DreamSiteOS, $500 one-time for a mobile-friendly one-page website with business services, supplied photos/logo, phone/email buttons, one consolidated revision and human review. Domain and hosting separate. Invite a conversation; do not request payment or promise a delivery date. Do not invent business facts, testimonials, guarantees, availability or evidence. Preserve source URLs. If the research is insufficient, report a blocker instead. Do not send or publish."
+    },
+    {
+      "id": "review-packet",
+      "role": "review",
+      "dependsOn": "prepare-outreach",
+      "allowanceMilliUsd": 500,
+      "prompt": "Review the supplied draft prospect packet for unsupported claims, overstated website gaps, fabricated relationships, missing sources, hidden recurring charges, and sales or delivery promises. You have not independently browsed those sources; say so. Return a corrected consolidated packet and a short list of checks still needed before sending. Label DRAFT / NOT SENT. Record revenue as unverified, not earned. Prioritize concrete next steps toward a first paid customer."
+    }
+  ]
+}
